@@ -1,0 +1,578 @@
+
+/*
+This page is designed  and coded totally by Hasan Shofan 2019.
+*/
+@import url("https://fonts.googleapis.com/css?family=Sniglet&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Sniglet", cursive;
+}
+
+#owner {
+    transform: rotateZ(5deg);
+    position: absolute;
+    top: 120px;
+    color: coral;
+}
+
+a:link{
+  color:#3a3a3a;
+}
+
+.main_image {
+  width: 85%;
+  height: auto;
+}
+@media screen and (min-width: 401px){
+  .main_image {
+    width: 50%;
+  }
+	
+	
+}
+
+.fixedHeader {
+  position: fixed;
+  background-color: #ffffff;
+  left: 0;
+  top: -100px;
+  width: 100%;
+  box-shadow: 2px 2px 11px 0px #9e9e9e;
+  transition: top 0.5s ease;
+  z-index: 99;
+}
+
+.hholder {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .hholder {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.menu {
+  padding: 16px;
+  color: #8bc34a;
+}
+.menu:hover {
+  color: #ff5722;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a svg {
+  width: 40px;
+  fill: #000;
+}
+
+/*
+	   * Off-canvas layout styles.
+*/
+
+nav {
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  /* This trasform moves the drawer off canvas. */
+  -webkit-transform: translate(-315px, 0);
+  transform: translate(-315px, 0);
+  /* Optionally, we animate the drawer. */
+  transition: transform 0.3s ease;
+
+  background-color:#cacacafa;
+  box-shadow: 2px -1px 14px 0px #9e9e9e;
+  z-index: 98;
+color: #31302f;
+}
+nav.open {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+a svg:hover {
+  fill: #8bc34a;
+  transform: scale(1.09);
+  transition: 0.2s;
+}
+
+.menu_list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.5em;
+  border: 0.3px solid #a7a7a7c7;
+  border-width: 0.3px 0 0 0;
+}
+
+.menu_list li {
+  padding: 3% 9%;
+  border: 0.3px solid #a7a7a7c7;
+  border-width: 0 0 0.3px 0.3px;
+  cursor: pointer;
+}
+
+.menu_list li:hover {
+  background-color: #ffffffcf;
+  transition: 0.4s;
+}
+.menu_list a:visited {
+  color: inherit;
+}
+
+#menu_search {
+  width: 80%;
+  margin: 7%;
+  border-radius: 20px;
+  border: 0;
+  line-height: 30px;
+  outline: none;
+  padding: 5px 20px;
+  font-size: 1.3em;
+  color: coral;
+}
+
+.member {
+  font-size: 1.3em;
+  padding: 3% 9%;
+  border: 0.3px solid #a7a7a7c7;
+  border-width: 0.3px 0 0.3px 0.3px;
+}
+
+.logo img {
+  margin: 20px;
+  cursor: pointer;
+}
+
+.search input {
+  outline: none;
+  height: 45px;
+  width: 250px;
+  margin-left: 20px;
+  border: 0px;
+  padding: 20px;
+  display: inline;
+  font: 13pt Sniglet;
+  color: #03a9f4;
+}
+
+.search:hover {
+  box-shadow: 1px 1px 4px 1px #dfe1e5;
+}
+.searchicon {
+  cursor: pointer;
+  display: inline;
+  padding-top: 5px;
+}
+
+.search {
+  display: none;
+}
+
+@media screen and (min-width: 1050px) {
+  .search {
+    display: flex;
+    width: 310px;
+    border: 1px solid #b9b9b97a;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+}
+
+.s-card {
+  box-shadow: 1px 1px 4px 1px #dfe1e5;
+}
+
+.website {
+  font: 7vw "Indie Flower", sans-serif;
+  padding-top: 50px;
+  color: #91c912;
+}
+
+@media screen and (min-width: 710px) {
+  .website {
+    font: 45px "Indie Flower", sans-serif;
+  }
+}
+
+.dimg_5 {
+  border-radius: 7px 7px 0px 0px;
+}
+.ic {
+  border: 1px solid #dfe1e5;
+  border-top: 0;
+  border-radius: 10px;
+  margin: 3%;
+  width: min-content;
+}
+.dis {
+  font-size: 16px;
+  line-height: 1.375;
+  padding: 13px 20px 12px 16px;
+}
+.Calories {
+  color: #ffffff;
+  line-height: 1.43;
+  padding: 4px 12px;
+  font: 16px "Yanone Kaffeesatz", sans-serif;
+  border-radius: 13px;
+  background: #9c27b0;
+  display: inline;
+  box-shadow: 2px 2px 4px 0px #607d8b;
+}
+
+.basedHeader {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #753a8a24;
+}
+.leftheader {
+  display: flex;
+  margin-right: 3%;
+}
+
+.rightheader {
+  display: none;
+}
+@media screen and (min-width: 580px) {
+  .rightheader {
+    display: block;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.icodiv {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #4285f4;
+}
+
+.icobuspa {
+  display: inline-block;
+  fill: currentColor;
+  width: 24px;
+}
+
+.svg-icon {
+  width: 30px;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #4691f6;
+}
+
+.svg-icon circle {
+  stroke: #4691f6;
+  stroke-width: 1;
+}
+
+.TRecipes {
+  width: 300px;
+  height: 300px;
+
+  border-radius: 300px 300px 300px 0px;
+  box-shadow: 1px 3px 12px 0px #716f6f;
+  margin: 10px 10px 150px 10px;
+}
+.TRecipes:hover {
+  transform: scale(1.01);
+  transition: 0.1s;
+}
+
+.TRB1 {
+  background-image: url("../images/Seekh Kebabs (Pakistani Spicy Grilled Ground Meat Skewers) Recipe.jpg");
+  background-size: cover;
+}
+.TRB2 {
+  background-image: url("../images/Easy-Indonesian-Sticky-Skillet-Chicken-2.jpg");
+  background-size: cover;
+}
+.TRB3 {
+  background-image: url("../images/Lime, soy and sesame steak with shitake mushrooms and sugar snap peas recipe.jpg");
+  background-size: cover;
+}
+
+.TRheadline {
+  color: #a221d0;
+  font-size: xx-large;
+}
+
+.discription {
+  background-color: #020202d1;
+  padding: 20px;
+  display: inline-block;
+  color: #e8ff00;
+  font-size: medium;
+  margin-top: 300px;
+  border-radius: 0px 0px 5px 5px;
+  box-shadow: inherit;
+}
+
+.user {
+  border: 1px solid green;
+  margin: 0px 5px;
+  border-radius: 3px;
+  display: flex;
+  width: max-content;
+  padding: 5px;
+
+  background-color: #f8f8f8;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#f8f8f8),
+    to(#f1f1f1)
+  );
+  background-image: -webkit-linear-gradient(to top, #f8f8f8, #f1f1f1);
+  background-image: linear-gradient(to top, #f8f8f8, #f1f1f1);
+  border: 1px solid #c6c6c6;
+  color: #777;
+  box-shadow: 0 1px 2px rgba(12, 12, 12, 0.1);
+}
+
+.user:hover {
+  background-color: #f8f8f8;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#f8f8f8),
+    to(#f1f1f1)
+  );
+  background-image: -webkit-linear-gradient(to top, #f8f8f8, #ece8e8);
+  background-image: linear-gradient(to top, #f8f8f8, #f1f1f1);
+  border: 1px solid #c6c6c6;
+  color: #2196f3;
+  box-shadow: 0 1px 2px rgba(121, 121, 121, 0.24);
+}
+
+.usertext {
+  padding: 3px;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 5%;
+  color: #252525;
+
+}
+
+.leftside {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    flex-direction: row;
+  }
+  .leftside {
+    max-width: 66%;
+  }
+}
+
+.icContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media screen and (min-width: 1120px) {
+  .icContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+
+
+.rightside {
+  min-width: 29%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rightside h3 {
+  padding: 10% 0 2% 0;
+  border: 1px solid #7b7b7bcf;
+  border-width: 0 0 1px 0;
+  align-self: start;
+  width: 100%;
+}
+
+.main_recipe h1 {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.main_recipe h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.main_recipe p {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 769px) {
+  .main_recipe h1 {
+    font-size: 40px;
+  }
+  .main_recipe h2 {
+    font-size: 30px;
+  }
+  .main_recipe p {
+    font-size: 22px;
+  }
+}
+
+article {
+  font-size: 20px;
+}
+@media screen and (min-width: 401px) {
+  article {
+    font-size: 25px;
+  }
+}
+
+.cal {
+  font: 20px "Yanone Kaffeesatz", sans-serif;
+  color: #ffffff;
+  line-height: 1.43;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: #9c27b0;
+  display: inline-block;
+  box-shadow: 2px 2px 4px 0px #607d8bcc;
+  margin-left: 20px;
+}
+
+.subtitle {
+  margin-top: 5px;
+  font: 25px serif;
+  color: #656565;
+}
+.ing {
+  background: #8bc34ae0;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: 1px solid #a7a7a7;
+  box-shadow: 4px 5px 10px 0px #3a3a3a82;
+  margin-bottom: 30px;
+}
+
+.inst {
+  background: #dadadae0;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: 1px solid #c3c3c3c7;
+  box-shadow: 4px 5px 10px 0px #3a3a3a82;
+  font-size: 16px;
+}
+#ing_ico,
+#inst_ico {
+  margin-left: 20px;
+}
+
+.article_link {
+  color: #ff5722;
+  font-weight: 800;
+}
+
+
+footer {
+  width: 100%;
+  background-color: #131212;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+.tr h1 {
+  padding: 10% 0 2% 0;
+  border: 1px solid #7b7b7bcf;
+  border-width: 0 0 1px 0;
+}
+
+.flgroup {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 50px 0;
+}
+
+@media screen and (min-width: 767px) {
+  .flgroup {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    padding: 20px;
+  }
+}
+a.fLink {
+  padding: 5px;
+  color: #d4d4d4;
+  width: 100%;
+}
+
+a.fLink:hover {
+  background-color: #ffffff;
+  color: #1d1d1d;
+  transition: 0.5s;
+border-radius: 3px;
+}
+.copyright {
+  color: #afafaf;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.icon-bar {
+  margin: 5%;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 401px) {
+  .icon-bar {
+    display: block;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: #d6d6d6ab;
+    margin: 0;
+  }
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.icon-bar a:hover {
+  background-color: #fff;
+}
+
+.social-svg-icon {
+  width: 30px;
+}
